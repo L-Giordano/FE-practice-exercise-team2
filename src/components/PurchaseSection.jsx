@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./PurchaseSection.css";
 
 import { TicketConnected } from "./TicketConnected";
 
@@ -71,6 +72,8 @@ export function PurchaseSection() {
                     </select>
                 </p>
             </div>
+            <hr/>
+            <button>Completar Pedido</button>
         </div>
     )
     
