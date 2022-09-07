@@ -19,13 +19,19 @@ export function PurchaseSection(props) {
     // ticketSelection.forEach(ticket => ticket.purchase = 0);
 
     return (
-        <div>
+        <div className="purchaseSection">
             <h3>{event.eventName}</h3>
             <p>{event.startDatetime} - {event.endDateTime}</p>
             <hr/>
-            {ticketSelection.map(t => <TicketConnected {...t}/>)}
-            <div>
-                <p>
+            {ticketSelection.map(t => {
+                return (<div>
+                    <TicketConnected {...t}/>
+                    <hr />
+                </div>
+                )
+            })}
+            <div className="bottomLine">
+                <p className="poweredBy">
                     Powered by Eventbrite
                 </p>
                 <p>
@@ -40,7 +46,7 @@ export function PurchaseSection(props) {
                 </p>
             </div>
             <hr/>
-            <button>Completar Pedido</button>
+            <button className="completeButton">Completar Pedido</button>
         </div>
     )
     
