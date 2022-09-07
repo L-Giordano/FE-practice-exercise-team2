@@ -3,6 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #39364f;
 }
 
 .amountSelector{
@@ -23,12 +26,21 @@
     line-height: 1.75rem;
     letter-spacing: .25px;
     margin-right: -0.25px;
+    margin-bottom: 4px;
     font-weight: 600;
 }
 
 .feeText{
     font-size: .875rem;
     line-height: 1.25rem;
+    color: #6f7287;
+}
+
+.salesEnd{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin-top: 8px;
     color: #6f7287;
 }
 

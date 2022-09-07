@@ -20,6 +20,7 @@ export function Ticket(props) {
             <div className="ticketSpecs">
                 <span className="ticketName">{name}</span>
                 <span>${price} {props.fee && <span className="feeText">+ ${feeTotal()} fees</span>}</span>
+                <span className="salesEnd">Ticket sales end at 01/01/2022</span>
                 
                 
             </div>
