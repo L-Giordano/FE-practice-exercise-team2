@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import getEventData from "../api/eventService";
 import "../styles.css";
 import { CardContainerConnected } from "./CardContainerConnected";
 import { Modal } from "./Modal";
-import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
+import { ModalConnected } from "./ModalConnected";
+
 
 
 const App = (props) => {
 
   const { mockedApi, mockApi } = props;
-  const [ showModal, setShowModal ] = useState(false);
+
+  
 
   useEffect(()=>{
     getEventData()
@@ -31,9 +33,8 @@ const App = (props) => {
       Download the project and install all the dependencies necessaries to execute it.
       </p>
       <CardContainerConnected />
-      <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button>
-      <Modal displayModal={showModal} setShowModal={setShowModal}/>
-      <CardContainerConnected/>
+      {/* <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button> */}
+      <ModalConnected displayModal={mockedApi.modal.isOpen}/>
     </div>
   );
 };

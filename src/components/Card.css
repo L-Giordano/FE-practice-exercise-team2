@@ -1,8 +1,6 @@
 .individual-card {
     padding: 1%;
     margin: auto;
-
-
 }
 
 .image {
@@ -15,4 +13,46 @@
     background-color: white;
     padding-bottom: 10px;
     border-color: gray;
+    text-align: left;
+
+}
+
+.description .time {
+    color: #d1410c;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+.description .event-name {
+    font-weight: 700;
+    color: #39364f;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+.description .venue {
+    color: #6f7287;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+.description .followers {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    flex-direction: column;
+}
+
+.description .followers .follow-button {
+    background-color: DodgerBlue;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    padding: 2px 2px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.description .starting-price {
+    color: #6f7287;
 }

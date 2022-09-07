@@ -59,6 +59,9 @@ export const reducerEvent = (state = initialState, action) => {
         console.log(newModal);
         return {...state, modal: newModal}
 
+      case "@closeModal":
+        return {...state, modal:{isOpen: false, event:[]}}
+
     default:
         return state;
     }
