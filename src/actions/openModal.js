@@ -7,6 +7,12 @@ export const openModal = (eventId) => (dispatch) => {
     return dispatch(action);
 };
 
+export const closeModal = {type:"@closeModal"}
+
+export const closeModalOnClick = () => (dispatch) => {
+  return dispatch(closeModal)
+}
+
 // Para hacerlo correcatmente, dewbería sacar el método "openModal" a la cafrpeta "actions",
 // No debe definirse la lógica aquí.
 /*
