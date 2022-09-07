@@ -1,0 +1,36 @@
+.ticket{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amountSelector{
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+.ticketSpecs{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.ticketName{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: .25px;
+    margin-right: -0.25px;
+    font-weight: 600;
+}
+
+.feeText{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #6f7287;
+}
+
+.amount{
+}
