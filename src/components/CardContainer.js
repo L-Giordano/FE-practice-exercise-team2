@@ -1,15 +1,16 @@
 import React from "react";
 import { Card } from "./Card";
+import { CardConnected } from "./CardConnected";
 import "./CardContainer.css"
 
 export const CardContainer = (props) => {
     //traerme mockedapi.events
-    const { eventList } = props
+    const { eventList, onUserClick } = props
 
     return (
         <div className="card-container">
 
-            {eventList.map(elem => <Card {...elem} key={elem.id}/>)}
+            {eventList.map(elem => <CardConnected {...elem} key={elem.id}/>)}
         </div>
     )
 }
