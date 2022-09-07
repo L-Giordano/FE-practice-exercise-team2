@@ -1,10 +1,11 @@
 import React from "react";
 import "./Card.css";
 import { formatTime } from "../utils/FormatTime";
+import { startingPrice } from "../utils/startingPrice";
 
 export const Card = (props) => {
     
-    const {id, eventName, imageUrl, startDatetime, endDateTime, venue, followers, onUserClick} = props
+    const {id, eventName, imageUrl, startDatetime, endDateTime, venue, tickets, followers, onUserClick} = props
 
     const onClick = () => {
         console.log("aaa");
@@ -14,7 +15,7 @@ export const Card = (props) => {
     }
 
     const dateFormated = formatTime(startDatetime)
-
+    const priceToShow = startingPrice(tickets)
     return (
         <div className="individual-card">
             <div className="image">
@@ -24,7 +25,11 @@ export const Card = (props) => {
                 <div className="event-name">{eventName}</div>
                 <div className="time">{dateFormated}</div>
                 <div className="venue">{venue}</div>
-                <div className="followers">{followers} followers</div>
+                <div className="starting-price">{priceToShow}</div>
+                <div className="followers">
+                    <div className="num-followers">{followers} followers</div>
+                    <button className="follow-button"><i>corazon</i></button>
+                </div>
             </div>
         </div>
     )

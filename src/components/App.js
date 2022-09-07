@@ -6,6 +6,7 @@ import { Modal } from "./Modal";
 import { ModalConnected } from "./ModalConnected";
 
 
+
 const App = (props) => {
 
   const { mockedApi, mockApi } = props;
@@ -34,7 +35,6 @@ const App = (props) => {
       <CardContainerConnected />
       {/* <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button> */}
       <ModalConnected displayModal={mockedApi.modal.isOpen}/>
-      <CardContainerConnected/>
     </div>
   );
 };
