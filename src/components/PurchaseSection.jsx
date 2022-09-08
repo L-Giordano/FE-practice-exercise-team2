@@ -7,6 +7,13 @@ export function PurchaseSection(props) {
 
     const event = props.eventData.event
 
+    const {closeModalOnClick} = props
+
+    const confirmPurchase = () => {
+        closeModalOnClick()
+        /// Algo to save purchase on reducer
+    }
+
     const ticketSelection = [];
 
     event.tickets.forEach(ticket => {
@@ -45,8 +52,7 @@ export function PurchaseSection(props) {
                     </select>
                 </p>
             </div>
-            <hr/>
-            <button className="completeButton">Completar Pedido</button>
+            <button className="completeButton" onClick={confirmPurchase}>Completar Pedido</button>
         </div>
     )
     

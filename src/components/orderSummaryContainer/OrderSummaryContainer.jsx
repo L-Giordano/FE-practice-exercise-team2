@@ -1,5 +1,6 @@
-import React from "react"
-import { OrderSummaryConnected } from "../orderSummary/OrderSummaryConnected"
+import React from "react";
+import { OrderSummaryConnected } from "../orderSummary/OrderSummaryConnected";
+import "./OrderSummaryContainer.css";
 
 export const OrderSummaryContainer = (props) =>{
 

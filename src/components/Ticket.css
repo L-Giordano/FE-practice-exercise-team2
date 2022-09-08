@@ -44,5 +44,9 @@
     color: #6f7287;
 }
 
-.amount{
+#amount{
+    color: #39364f;
+    height: 2.5rem;
+    width: 4rem;
+    text-align: center;
 }
