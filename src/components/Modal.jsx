@@ -2,6 +2,7 @@ import React from "react";
 import './Modal.css';
 import { PurchaseSection } from "./PurchaseSection";
 import { PurchaseSectionConnected } from "./PurchaseSectionConnected";
+import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
 
 export function Modal({displayModal, closeModalOnClick}) {// display, eventData
 
@@ -10,12 +11,16 @@ export function Modal({displayModal, closeModalOnClick}) {// display, eventData
         <div className="modal">
             <div id="myModal" class="modal">
                 <div class="modal-content">
-                    
-                    <p>Modal Text</p>
-                    <div>Modal Abierto</div>
+                  <div className="left-component">
+                    {/*}
                     <button id="myBtn" onClick={closeModalOnClick}>Close Modal</button>
-                    <PurchaseSectionConnected/>
+                    {*/}
+                    <PurchaseSectionConnected closeModalOnClick={closeModalOnClick}/>
+                  </div>
+                    
+                    <OrderSummaryContainerConnected />
                 </div>
+                
                 
             </div>
         </div>
