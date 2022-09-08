@@ -3,16 +3,46 @@ import "./Ticket.css";
 
 export function Ticket(props) {
 
-    const {name, price, fee, fee_type, ticketInfo} = props
+    const {id, name, price, fee, fee_type, state, eventId, purchaseTicketOnClick} = props
 
-    console.log(!!ticketInfo);
-    if (ticketInfo) {console.log(ticketInfo)};
+    // console.log(!!ticketInfo);
+    // if (ticketInfo) {console.log(ticketInfo)};
 
     // "fee_type": "percent", "fixed"
 
     const feeTotal = () => {
         if (fee_type === "fixed") {return fee};
         if (fee_type === "percent") {return price * fee / 100};
+    }
+
+    const selectTicket = (e) => {
+
+        let newState = JSON.parse(JSON.stringify(state))
+
+        let ticketToPurchase = newState.modal.event.tickets.find(e => e.id == id)
+
+        ticketToPurchase.purchase = e.target.value
+
+        purchaseTicketOnClick(newState)
+
+
+
+        // let newEvent = state.modal.events.filter(element => element.id = eventId)
+        // let ticketModify = newEvent.tickets.find(element => element.id === id)
+        // ticketModify.purchase = e.target.value
+
+        // let newModal = {...state.modal}
+        // let ticketModify = newModal.events
+        //                     .find(element => element.id === eventId).tickets
+        // ticketModify.purchase = e.target.value
+
+
+
+
+        // const newState = {...state, modal}
+   
+
+
     }
 
     return (
@@ -25,7 +55,8 @@ export function Ticket(props) {
                 
             </div>
             <div className="amountSelector">
-                <select id="amount" name="purchase">
+                <select id="amount" name="purchase" onChange={selectTicket}>
+                    { props.quantity >= 0 && <option value="0">-</option> }
                     { props.quantity >= 1 && <option value="1">1</option> }
                     { props.quantity >= 2 && <option value="2">2</option> }
                     { props.quantity >= 3 && <option value="3">3</option> }
