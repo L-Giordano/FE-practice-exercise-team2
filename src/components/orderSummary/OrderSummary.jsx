@@ -7,6 +7,7 @@ export const OrderSummary = (props) =>{
 
     const { modal } = props
     
+    console.log("modal",props.modal.event.tickets)
     let tickets = modal.event.tickets.filter(e => e.purchase > 0)
 
     const calculateFee = (ticket) => {
@@ -37,7 +38,7 @@ export const OrderSummary = (props) =>{
         subTotal += element.purchase * element.price
     })
 
-
+    console.log("tickets",tickets)
     return(
         <div className="OrderSummary">
             {tickets.map(e => {

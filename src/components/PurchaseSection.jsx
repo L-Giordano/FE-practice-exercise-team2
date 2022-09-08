@@ -31,6 +31,7 @@ export function PurchaseSection(props) {
             <p>{event.startDatetime} - {event.endDateTime}</p>
             <hr/>
             {ticketSelection.map(t => {
+                t.eventId = event.id
                 return (<div>
                     <TicketConnected {...t}/>
                     <hr />

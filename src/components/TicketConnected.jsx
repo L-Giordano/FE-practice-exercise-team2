@@ -1,16 +1,17 @@
 import { connect } from "react-redux";
 import { Ticket } from "./Ticket";
+import { purchaseTicketOnClick } from "../actions/ticketActions";
 
 
 const mapStateToProps = (state) => {
     return {
-      // number: state
-      ticketInfo: state
+
+      state
     };
   };
   
 const mapDispatchToProps = {
-  // onUserClick: clickMe2
+  purchaseTicketOnClick
 };
   
 export const TicketConnected = connect(

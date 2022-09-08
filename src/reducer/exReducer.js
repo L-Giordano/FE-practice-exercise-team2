@@ -62,6 +62,10 @@ export const reducerEvent = (state = initialState, action) => {
       case "@closeModal":
         return {...state, modal:{isOpen: false, event:[]}}
 
+
+      case "@purchaseTicket":
+        return action.payload
+
     default:
         return state;
     }
