@@ -21,7 +21,7 @@ export function Ticket(props) {
 
         let ticketToPurchase = newState.modal.event.tickets.find(e => e.id == id)
 
-        ticketToPurchase.purchase = e.target.value
+        ticketToPurchase.purchase = parseInt(e.target.value)
 
         purchaseTicketOnClick(newState)
 

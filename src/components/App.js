@@ -24,6 +24,7 @@ const App = (props) => {
     })
   },[]);
 
+  console.log("api", mockedApi)
   return (
     <div className="App">
       <h1>Hi y'all!</h1>

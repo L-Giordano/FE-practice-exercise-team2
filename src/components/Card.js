@@ -26,6 +26,14 @@ export const Card = (props) => {
                 <div className="time">{dateFormated}</div>
                 <div className="venue">{venue}</div>
                 <div className="starting-price">{priceToShow}</div>
+                <div>
+                    <ul>
+                        {tickets.map(e => <li key={Math.random()*1000}>{e.quantity}</li>)}
+                    </ul>
+                   
+                </div>
+
+
                 <div className="followers">
                     <div className="num-followers">{followers} followers</div>
                     <button className="follow-button"><i>corazon</i></button>
