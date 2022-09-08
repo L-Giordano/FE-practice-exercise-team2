@@ -60,10 +60,14 @@ export const reducerEvent = (state = initialState, action) => {
         return {...state, modal: newModal}
 
       case "@closeModal":
-        return {...state, modal:{isOpen: false, event:[]}}
+        return {...state, modal:{ isOpen: false}}
 
 
       case "@purchaseTicket":
+        return action.payload
+
+      case "@checkout":
+        console.log("payload", action.payload)
         return action.payload
 
     default:

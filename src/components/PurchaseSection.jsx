@@ -5,13 +5,29 @@ import { TicketConnected } from "./TicketConnected";
 
 export function PurchaseSection(props) {
 
-    const event = props.eventData.event
+    const checkoutOnClick = props.checkoutOnClick
+    const closeModalOnClick = props.closeModalOnClick
+    const state = props.eventData
+    const modal = props.eventData.modal
+    const event = props.eventData.modal.event
 
-    const {closeModalOnClick} = props
+
 
     const confirmPurchase = () => {
+
+        let newState = JSON.parse(JSON.stringify(state))
+
+        newState.events.forEach(e => {
+            if(e.id === event.id){
+                for (let i=0; i<e.tickets.length; i++){
+                    e.tickets[i].quantity = e.tickets[i].quantity - event.tickets[i].purchase
+                }
+            }
+        })
+        checkoutOnClick(newState)
         closeModalOnClick()
-        /// Algo to save purchase on reducer
+
+
     }
 
     const ticketSelection = [];

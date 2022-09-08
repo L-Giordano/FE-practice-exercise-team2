@@ -12,9 +12,9 @@ export function Modal({displayModal, closeModalOnClick}) {// display, eventData
             <div id="myModal" class="modal">
                 <div class="modal-content">
                   <div className="left-component">
-                    {/*}
+                    
                     <button id="myBtn" onClick={closeModalOnClick}>Close Modal</button>
-                    {*/}
+                    
                     <PurchaseSectionConnected closeModalOnClick={closeModalOnClick}/>
                   </div>
                     
