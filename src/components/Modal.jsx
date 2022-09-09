@@ -1,6 +1,5 @@
 import React from "react";
 import './Modal.css';
-import { PurchaseSection } from "./PurchaseSection";
 import { PurchaseSectionConnected } from "./PurchaseSectionConnected";
 import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
 
@@ -9,8 +8,8 @@ export function Modal({displayModal, closeModalOnClick}) {// display, eventData
     if(displayModal )
     return (
         <div className="modal">
-            <div id="myModal" class="modal">
-                <div class="modal-content">
+            <div id="myModal" className="modal">
+                <div className="modal-content">
                   <div className="left-component">
                     
                     <button id="myBtn" onClick={closeModalOnClick}>Close Modal</button>
@@ -20,8 +19,6 @@ export function Modal({displayModal, closeModalOnClick}) {// display, eventData
                     
                     <OrderSummaryContainerConnected />
                 </div>
-                
-                
             </div>
         </div>
     )

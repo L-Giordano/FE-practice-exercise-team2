@@ -7,11 +7,9 @@ export const formatTime = (startDatetime) => {
     switch (diference) {
         case 1:
             const dateTomorrow = 'Tomorrow at '.concat(moment(startDatetime).format('LT'))
-            console.log(dateTomorrow)
             return dateTomorrow
         case 0:
             const dateToday = 'Today at '.concat(moment(startDatetime).format('LT'))
-            console.log(dateToday)
             return dateToday
         default:
             const startDatetimeFormated = moment(startDatetime).format("llll")

@@ -8,11 +8,8 @@ export function PurchaseSection(props) {
     const checkoutOnClick = props.checkoutOnClick
     const closeModalOnClick = props.closeModalOnClick
     const state = props.eventData
-    const modal = props.eventData.modal
     const event = props.eventData.modal.event
-
-
-
+    
     const confirmPurchase = () => {
 
         let newState = JSON.parse(JSON.stringify(state))
@@ -33,13 +30,8 @@ export function PurchaseSection(props) {
     const ticketSelection = [];
 
     event.tickets.forEach(ticket => {
-        const ticketCopy = {...ticket};
         ticketSelection.push(ticket);
     });
-
-    console.log(ticketSelection)
-
-    // ticketSelection.forEach(ticket => ticket.purchase = 0);
 
     return (
         <div className="purchaseSection">
@@ -48,8 +40,8 @@ export function PurchaseSection(props) {
             <hr/>
             {ticketSelection.map(t => {
                 t.eventId = event.id
-                return (<div>
-                    <TicketConnected {...t}/>
+                return (<div key={t.id}>
+                    <TicketConnected  {...t}/>
                     <hr />
                 </div>
                 )
@@ -59,7 +51,7 @@ export function PurchaseSection(props) {
                     Powered by Eventbrite
                 </p>
                 <p>
-                    <label for="card">
+                    <label htmlFor="lenguage">
                         <span>Language:</span>
                     </label>
                     <select id="card" name="usercard">
