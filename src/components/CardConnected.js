@@ -5,7 +5,7 @@ import { openModal } from "../actions/openModal";
 
 const mapStateToProps = (state) => {
     return {
-      completeList: state.complete
+      state
     };
 };
 

@@ -5,7 +5,7 @@ import { startingPrice } from "../utils/startingPrice";
 
 export const Card = (props) => {
     
-    const {id, eventName, imageUrl, startDatetime, venue, tickets, followers, onUserClick} = props
+    const {id, eventName, imageUrl, startDatetime, venue, tickets, followers, onUserClick, state} = props
 
     const onClick = () => {
         onUserClick(id);
@@ -16,7 +16,7 @@ export const Card = (props) => {
     return (
         <div className="individual-card">
             <div className="image">
-                <img alt= " " src={imageUrl} height="200px" width="200px" onClick={onClick}></img>
+                <img alt= " " src={imageUrl} height="200px" width="200px" onClick={state.events.find(e => e.id ===id).soldOut ===false? onClick:null}></img>
             </div>
             <div className="description">
                 <div className="event-name">{eventName}</div>
@@ -24,9 +24,15 @@ export const Card = (props) => {
                 <div className="venue">{venue}</div>
                 <div className="starting-price">{priceToShow}</div>
                 <div>
+
+                    {state.events.find(e => e.id ===id).soldOut ===true ?<p>SOLD OUT</p>:
+                    
                     <ul>
-                        {tickets.map(e => <li key={Math.random()*1000}>{e.quantity}</li>)}
-                    </ul>
+                    {tickets.map(e => <li key={Math.random()*1000}>{e.quantity}</li>)}
+                </ul>
+                    
+                    }
+
                    
                 </div>
                 <div className="followers">
