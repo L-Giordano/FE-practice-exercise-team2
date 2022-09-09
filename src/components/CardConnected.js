@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Card } from "./Card";
 import { connect } from "react-redux";
 import { openModal } from "../actions/openModal";

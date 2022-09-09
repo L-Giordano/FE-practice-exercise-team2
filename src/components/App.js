@@ -3,15 +3,10 @@ import getEventData from "../api/eventService";
 import "../styles.css";
 import { CardContainerConnected } from "./CardContainerConnected";
 import { ModalConnected } from "./ModalConnected";
-import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
-
-
 
 const App = (props) => {
 
   const { mockedApi, mockApi } = props;
-
-  
 
   useEffect(()=>{
     getEventData()
@@ -24,7 +19,6 @@ const App = (props) => {
     })
   },[]);
 
-  console.log("api", mockedApi)
   return (
     <div className="App">
       <h1>Hi y'all!</h1>
@@ -34,7 +28,6 @@ const App = (props) => {
       Download the project and install all the dependencies necessaries to execute it.
       </p>
       <CardContainerConnected />
-      {/* <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button> */}
       <ModalConnected displayModal={mockedApi.modal.isOpen}/>
 
     </div>

@@ -3,12 +3,7 @@ import "./Ticket.css";
 
 export function Ticket(props) {
 
-    const {id, name, price, fee, fee_type, state, eventId, purchaseTicketOnClick} = props
-
-    // console.log(!!ticketInfo);
-    // if (ticketInfo) {console.log(ticketInfo)};
-
-    // "fee_type": "percent", "fixed"
+    const {id, name, price, fee, fee_type, state, purchaseTicketOnClick} = props
 
     const feeTotal = () => {
         if (fee_type === "fixed") {return fee};
@@ -19,29 +14,11 @@ export function Ticket(props) {
 
         let newState = JSON.parse(JSON.stringify(state))
 
-        let ticketToPurchase = newState.modal.event.tickets.find(e => e.id == id)
+        let ticketToPurchase = newState.modal.event.tickets.find(e => e.id === id)
 
         ticketToPurchase.purchase = parseInt(e.target.value)
 
         purchaseTicketOnClick(newState)
-
-
-
-        // let newEvent = state.modal.events.filter(element => element.id = eventId)
-        // let ticketModify = newEvent.tickets.find(element => element.id === id)
-        // ticketModify.purchase = e.target.value
-
-        // let newModal = {...state.modal}
-        // let ticketModify = newModal.events
-        //                     .find(element => element.id === eventId).tickets
-        // ticketModify.purchase = e.target.value
-
-
-
-
-        // const newState = {...state, modal}
-   
-
 
     }
 

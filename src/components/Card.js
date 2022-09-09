@@ -5,12 +5,9 @@ import { startingPrice } from "../utils/startingPrice";
 
 export const Card = (props) => {
     
-    const {id, eventName, imageUrl, startDatetime, endDateTime, venue, tickets, followers, onUserClick} = props
+    const {id, eventName, imageUrl, startDatetime, venue, tickets, followers, onUserClick} = props
 
     const onClick = () => {
-        console.log("aaa");
-        console.log(eventName);
-        console.log(`id is ${id}`);
         onUserClick(id);
     }
 
@@ -32,8 +29,6 @@ export const Card = (props) => {
                     </ul>
                    
                 </div>
-
-
                 <div className="followers">
                     <div className="num-followers">{followers} followers</div>
                     <button className="follow-button"><i>corazon</i></button>

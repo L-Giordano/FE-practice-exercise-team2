@@ -1,5 +1,4 @@
 export const openModal = (eventId) => (dispatch) => {
-    console.log("attempting to open now...");
     let action = {
       type: "@openModalById",
       payload: eventId

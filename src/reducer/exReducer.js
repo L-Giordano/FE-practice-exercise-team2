@@ -44,19 +44,16 @@ const initialState = {
 }
 
 export const reducerEvent = (state = initialState, action) => {
-    let newState;
     switch (action.type) {
       case "@createMoskApi":
         return {...state, events:action.payload};
       case "@openModalById":
-        // payload here should be the id of the desired event, e.g.: payload = 6;
         let newEvent = {};
         newEvent = state.events.find(ev => ev.id === action.payload)
         const newModal = {
           event: newEvent,
           isOpen: true,
         }
-        console.log(newModal);
         return {...state, modal: newModal}
 
       case "@closeModal":
@@ -67,7 +64,6 @@ export const reducerEvent = (state = initialState, action) => {
         return action.payload
 
       case "@checkout":
-        console.log("payload", action.payload)
         return action.payload
 
     default:
