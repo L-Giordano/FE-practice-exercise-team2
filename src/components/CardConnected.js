@@ -5,16 +5,14 @@ import { openModal } from "../actions/openModal";
 
 const mapStateToProps = (state) => {
     return {
-      completeList: state.complete
+        completeList: state.complete
     };
 };
 
 const mapDispatchToProps = {
     onUserClick: openModal
 };
-  
+
 export const CardConnected = connect(
     mapStateToProps,
-    mapDispatchToProps
-)(Card);
-  
+    mapDispatchToProps)(Card);

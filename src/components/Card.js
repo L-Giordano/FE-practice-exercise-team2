@@ -2,15 +2,12 @@ import React from "react";
 import "./Card.css";
 import { formatTime } from "../utils/FormatTime";
 import { startingPrice } from "../utils/startingPrice";
+import { FollowButton } from "./FollowButton";
 
 export const Card = (props) => {
     
-    const {id, eventName, imageUrl, startDatetime, endDateTime, venue, tickets, followers, onUserClick} = props
-
+    const {id, eventName, imageUrl, startDatetime, endDateTime, venue, tickets, followers, onUserClick, isFollowByYou} = props
     const onClick = () => {
-        console.log("aaa");
-        console.log(eventName);
-        console.log(`id is ${id}`);
         onUserClick(id);
     }
 
@@ -36,7 +33,7 @@ export const Card = (props) => {
 
                 <div className="followers">
                     <div className="num-followers">{followers} followers</div>
-                    <button className="follow-button"><i>corazon</i></button>
+                    <FollowButton isFollowByYou={isFollowByYou} id={id} followers={followers} onClick={onClick}/>
                 </div>
             </div>
         </div>

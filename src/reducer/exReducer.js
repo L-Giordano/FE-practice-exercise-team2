@@ -10,6 +10,7 @@ const initialState = {
       "endDateTime": "2022-10-15T16:00:00Z",
       "venue": "123 Fake St.",
       "followers": 156,
+      "isFollowByYou":false,
       "tickets": [
         {
           "id": 1,
@@ -45,12 +46,13 @@ const initialState = {
 
 export const reducerEvent = (state = initialState, action) => {
     let newState;
+    let newEvent;
     switch (action.type) {
       case "@createMoskApi":
         return {...state, events:action.payload};
       case "@openModalById":
         // payload here should be the id of the desired event, e.g.: payload = 6;
-        let newEvent = {};
+        newEvent = {};
         newEvent = state.events.find(ev => ev.id === action.payload)
         const newModal = {
           event: newEvent,
