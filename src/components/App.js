@@ -3,15 +3,12 @@ import getEventData from "../api/eventService";
 import "../styles.css";
 import { CardContainerConnected } from "./CardContainerConnected";
 import { ModalConnected } from "./ModalConnected";
-import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
 
 
 
 const App = (props) => {
 
   const { mockedApi, mockApi } = props;
-
-  
 
   useEffect(()=>{
     getEventData()
@@ -30,7 +27,6 @@ const App = (props) => {
       <CardContainerConnected />
       {/* <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button> */}
       <ModalConnected displayModal={mockedApi.modal.isOpen}/>
-
     </div>
   );
 };

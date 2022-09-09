@@ -69,8 +69,29 @@ export const reducerEvent = (state = initialState, action) => {
         return action.payload
 
       case "@checkout":
-        console.log("payload", action.payload)
         return action.payload
+
+      case "@followEvent":
+        newState = Object.assign({},state);
+        newState.events = newState.events.map(event=>{
+          if(event.id === action.payload){
+            event.followers ++;
+            event.isFollowByYou = true
+          }
+          return event
+        })
+        return newState
+
+      case "@unfollowEvent":
+        newState = Object.assign({},state);
+        newState.events = newState.events.map(event=>{
+          if(event.id === action.payload){
+            event.followers --;
+            event.isFollowByYou = false
+          }
+          return event
+        })
+        return newState
 
     default:
         return state;

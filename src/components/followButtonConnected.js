@@ -1,6 +1,5 @@
 import { FollowButton } from "./FollowButton";
 import { connect } from "react-redux";
-import { FollowButton } from "./FollowButton";
 import { unfollowAction } from "../actions/unfollowAction";
 import { followAction } from "../actions/followAction";
 
@@ -10,12 +9,9 @@ const stateToTaskInput = (state) => {
     };
 };
 
-
-
 const mapDispatchToProps = {
     followAction : followAction,
     unfollowAction : unfollowAction,
 };
 
-
-export const followButtonConnected = connect( stateToTaskInput, mapDispatchToProps)(FollowButton);
+export const FollowButtonConnected = connect( stateToTaskInput, mapDispatchToProps)(FollowButton);
