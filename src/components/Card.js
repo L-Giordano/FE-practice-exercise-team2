@@ -2,11 +2,11 @@ import React from "react";
 import "./Card.css";
 import { formatTime } from "../utils/FormatTime";
 import { startingPrice } from "../utils/startingPrice";
-import { FollowButton } from "./FollowButton";
+import { FollowButtonConnected } from "./FollowButtonConnected";
 
 export const Card = (props) => {
     
-    const {id, eventName, imageUrl, startDatetime, venue, tickets, followers, onUserClick, state} = props
+    const {id, eventName, imageUrl, startDatetime, venue, tickets, followers, onUserClick, state, isFollowByYou} = props
 
     const onClick = () => {
         onUserClick(id);
@@ -38,7 +38,7 @@ export const Card = (props) => {
                 </div>
                 <div className="followers">
                     <div className="num-followers">{followers} followers</div>
-                    <FollowButton isFollowByYou={isFollowByYou} id={id} followers={followers} onClick={onClick}/>
+                    <FollowButtonConnected isFollowByYou={isFollowByYou} id={id} followers={followers} onClick={onClick}/>
                 </div>
             </div>
         </div>

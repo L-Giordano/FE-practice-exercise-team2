@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import { followAction } from "../actions/followAction";
-import { unfollowAction } from "../actions/unfollowAction";
 
-export const FollowButton = (id, followers, isFollowByYou) => {
+export const FollowButton = (props) => {
+    const {id, isFollowByYou, followAction, unfollowAction} = props
     let test;
     if (isFollowByYou){
         test = "following"
@@ -11,8 +9,11 @@ export const FollowButton = (id, followers, isFollowByYou) => {
         test = "unfollowing"
     }
     const onClickFollow = () => {
-        console.log("shshss")
-        followAction(id)
+        if (isFollowByYou){
+            unfollowAction(id)
+        } else {
+            followAction(id)
+        }
     }
     return (
         <div>

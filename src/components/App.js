@@ -23,7 +23,6 @@ const App = (props) => {
     <div className="App">
       <CardContainerConnected />
       <ModalConnected displayModal={mockedApi.modal.isOpen}/>
-
     </div>
   );
 };

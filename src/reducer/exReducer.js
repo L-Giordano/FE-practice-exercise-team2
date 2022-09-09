@@ -45,6 +45,7 @@ const initialState = {
 }
 
 export const reducerEvent = (state = initialState, action) => {
+    let newState;
     switch (action.type) {
       case "@createMoskApi":
         return {...state, events:action.payload};
@@ -66,6 +67,28 @@ export const reducerEvent = (state = initialState, action) => {
 
       case "@checkout":
         return action.payload
+
+      case "@followEvent":
+        newState = Object.assign({},state);
+        newState.events = newState.events.map(event=>{
+          if(event.id === action.payload){
+            event.followers ++;
+            event.isFollowByYou = true
+          }
+          return event
+        })
+        return newState
+
+      case "@unfollowEvent":
+        newState = Object.assign({},state);
+        newState.events = newState.events.map(event=>{
+          if(event.id === action.payload){
+            event.followers --;
+            event.isFollowByYou = false
+          }
+          return event
+        })
+        return newState
 
     default:
         return state;
