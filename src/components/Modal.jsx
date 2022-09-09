@@ -3,7 +3,7 @@ import './Modal.css';
 import { PurchaseSectionConnected } from "./PurchaseSectionConnected";
 import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
 
-export function Modal({displayModal, closeModalOnClick}) {// display, eventData
+export function Modal({displayModal, closeModalOnClick}) {
 
     if(displayModal )
     return (

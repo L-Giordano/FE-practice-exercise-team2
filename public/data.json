@@ -49,6 +49,7 @@
       "venue": "12345 Fake St.",
       "followers": 14567,
       "soldOut":false,
+      "isFollowByYou": false,
       "tickets": [
         {
           "id":1,
@@ -71,6 +72,7 @@
       "venue": "123456 Fake St.",
       "followers": 6,
       "soldOut":false,
+      "isFollowByYou": false,
       "tickets": [
         {
           "id":1,
@@ -91,6 +93,7 @@
       "venue": "123sds Fake St.",
       "followers": 1566,
       "soldOut":false,
+      "isFollowByYou": false,
       "tickets": [
         {
           "id":1,

@@ -21,15 +21,8 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <h1>Hi y'all!</h1>
-      <p>
-      Create a new event visualization app, using the proposed project. 
-      This app will have a checkout component and will reduce the tickets quantity after purchase it.
-      Download the project and install all the dependencies necessaries to execute it.
-      </p>
       <CardContainerConnected />
       <ModalConnected displayModal={mockedApi.modal.isOpen}/>
-
     </div>
   );
 };
