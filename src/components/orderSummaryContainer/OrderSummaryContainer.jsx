@@ -8,8 +8,8 @@ export const OrderSummaryContainer = (props) =>{
 
     return(
         <div id="orderSummaryContainer">
-            <img className="orderImg" src={event.imageUrl} alt={event.eventName}></img>
-            <OrderSummaryConnected/>
+            <img data-testid="img-test"className="orderImg" src={event.imageUrl} alt={event.eventName}></img>
+            <OrderSummaryConnected data-testid="OrderSummary"/>
         </div>
         
     )

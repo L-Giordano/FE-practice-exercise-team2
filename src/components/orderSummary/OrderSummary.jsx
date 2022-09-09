@@ -22,7 +22,6 @@ export const OrderSummary = (props) =>{
             default:
                 return 0
         }
-
     }
 
 
