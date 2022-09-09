@@ -14,9 +14,12 @@ export function Ticket(props) {
 
         let newState = JSON.parse(JSON.stringify(state))
 
+
         let ticketToPurchase = newState.modal.event.tickets.find(e => e.id === id)
 
         ticketToPurchase.purchase = parseInt(e.target.value)
+
+  
 
         purchaseTicketOnClick(newState)
 
@@ -31,9 +34,11 @@ export function Ticket(props) {
                 
                 
             </div>
+
+            {props.quantity< 1 ?<p>SOLD OUT</p>:
             <div className="amountSelector">
                 <select id="amount" name="purchase" onChange={selectTicket}>
-                    { props.quantity >= 0 && <option value="0">-</option> }
+                    { props.quantity > 1 && <option value="0">-</option> }
                     { props.quantity >= 1 && <option value="1">1</option> }
                     { props.quantity >= 2 && <option value="2">2</option> }
                     { props.quantity >= 3 && <option value="3">3</option> }
@@ -41,6 +46,7 @@ export function Ticket(props) {
                     { props.quantity >= 5 && <option value="5">5</option> }
                 </select>
             </div>
+            }
         </div>
     )
 

@@ -21,6 +21,22 @@ export function PurchaseSection(props) {
                 }
             }
         })
+
+
+        let soldOut = 0
+        newState.events
+                    .find(e => e.id === event.id).tickets
+                    .forEach(ticket =>{
+                        if(ticket.quantity > 0) soldOut++
+                    })
+        
+        if(soldOut<1){
+            newState.events
+            .find(e => e.id === event.id).soldOut = true
+        }
+
+
+
         checkoutOnClick(newState)
         closeModalOnClick()
 
