@@ -12,9 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     onUserClick: openModal
 };
-  
+
 export const CardConnected = connect(
     mapStateToProps,
-    mapDispatchToProps
-)(Card);
-  
+    mapDispatchToProps)(Card);

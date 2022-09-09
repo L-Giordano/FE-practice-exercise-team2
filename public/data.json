@@ -48,7 +48,11 @@
       "endDateTime": "2022-11-15T16:00:00Z",
       "venue": "12345 Fake St.",
       "followers": 14567,
+<<<<<<< HEAD
       "soldOut":false,
+=======
+      "isFollowByYou": false,
+>>>>>>> e1e402c (follow-button)
       "tickets": [
         {
           "id":1,
@@ -70,7 +74,11 @@
       "endDateTime": "2022-11-17T16:00:00Z",
       "venue": "123456 Fake St.",
       "followers": 6,
+<<<<<<< HEAD
       "soldOut":false,
+=======
+      "isFollowByYou": false,
+>>>>>>> e1e402c (follow-button)
       "tickets": [
         {
           "id":1,
@@ -90,7 +98,11 @@
       "endDateTime": "2022-10-15T16:00:00Z",
       "venue": "123sds Fake St.",
       "followers": 1566,
+<<<<<<< HEAD
       "soldOut":false,
+=======
+      "isFollowByYou": false,
+>>>>>>> e1e402c (follow-button)
       "tickets": [
         {
           "id":1,

@@ -10,6 +10,7 @@ const initialState = {
       "endDateTime": "2022-10-15T16:00:00Z",
       "venue": "123 Fake St.",
       "followers": 156,
+      "isFollowByYou":false,
       "tickets": [
         {
           "id": 1,

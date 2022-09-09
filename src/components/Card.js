@@ -2,6 +2,7 @@ import React from "react";
 import "./Card.css";
 import { formatTime } from "../utils/FormatTime";
 import { startingPrice } from "../utils/startingPrice";
+import { FollowButton } from "./FollowButton";
 
 export const Card = (props) => {
     
@@ -37,7 +38,7 @@ export const Card = (props) => {
                 </div>
                 <div className="followers">
                     <div className="num-followers">{followers} followers</div>
-                    <button className="follow-button"><i>corazon</i></button>
+                    <FollowButton isFollowByYou={isFollowByYou} id={id} followers={followers} onClick={onClick}/>
                 </div>
             </div>
         </div>

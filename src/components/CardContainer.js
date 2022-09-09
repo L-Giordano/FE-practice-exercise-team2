@@ -7,7 +7,6 @@ export const CardContainer = (props) => {
 
     return (
         <div className="card-container">
-
             {eventList.map(elem => <CardConnected {...elem} key={elem.id}/>)}
         </div>
     )
