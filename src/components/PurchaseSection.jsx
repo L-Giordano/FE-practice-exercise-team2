@@ -35,12 +35,8 @@ export function PurchaseSection(props) {
             .find(e => e.id === event.id).soldOut = true
         }
 
-
-
         checkoutOnClick(newState)
         closeModalOnClick()
-
-
     }
 
     const ticketSelection = [];
